@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-
+    
     public static void main(String[] args) {
         Random random = new Random();
         int pid = random.nextInt(100) + 1;
@@ -16,6 +16,7 @@ public class Main {
         System.out.println("1 - Cartão");
         System.out.println("2 - Pix");
         int opc = scanner.nextInt();
+        scanner.close();
         MetodoPagamento metodo;
         if (opc == 1) {
             metodo = new PagamentoCartao();
